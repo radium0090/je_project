@@ -20,7 +20,7 @@ class SecondViewController: UIViewController, WKUIDelegate {
         webView = WKWebView(frame:CGRect(x:0, y:0, width:self.view.bounds.size.width, height:self.view.bounds.size.height))
         
         // URL設定
-        let urlString = "https://www.yahoo.com/"
+        let urlString = "https://quinz.me/cart-2/"
         let encodedUrlString = urlString.addingPercentEncoding(withAllowedCharacters:NSCharacterSet.urlQueryAllowed)
         
         let url = NSURL(string: encodedUrlString!)
