@@ -22,6 +22,11 @@
 		46D5315B21C8756F0071F0DD /* dkddmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D5315A21C8756F0071F0DD /* dkddmTests.swift */; };
 		46D5316621C8756F0071F0DD /* dkddmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D5316521C8756F0071F0DD /* dkddmUITests.swift */; };
 		BF517B92B6ADFD25466494FE /* Pods_dkddmUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462DC85D6736DF1D2CC1108E /* Pods_dkddmUITests.framework */; };
+		C2B35DEF21DEE99C00CFDF04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B35DEE21DEE99C00CFDF04 /* ViewController.swift */; };
+		C2B35DF121DEE9E900CFDF04 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B35DF021DEE9E900CFDF04 /* FourthViewController.swift */; };
+		C2B35DF321DEE9FA00CFDF04 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B35DF221DEE9FA00CFDF04 /* FifthViewController.swift */; };
+		C2B35DF521DEEA4600CFDF04 /* FouTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2B35DF421DEEA4600CFDF04 /* FouTab.storyboard */; };
+		C2B35DF721DEEA5600CFDF04 /* FifTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2B35DF621DEEA5600CFDF04 /* FifTab.storyboard */; };
 		D506F16941831E366B7F63C0 /* Pods_dkddmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B5ADDB7F255BEAF8CFA4C1 /* Pods_dkddmTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +76,11 @@
 		64096C2E6F792A558730DEBC /* Pods-dkddm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dkddm.release.xcconfig"; path = "Pods/Target Support Files/Pods-dkddm/Pods-dkddm.release.xcconfig"; sourceTree = "<group>"; };
 		A49DDD7BFE926CAB5549A17D /* Pods-dkddmUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dkddmUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-dkddmUITests/Pods-dkddmUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AAA58D684352B088683DC3A5 /* Pods-dkddmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dkddmTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-dkddmTests/Pods-dkddmTests.release.xcconfig"; sourceTree = "<group>"; };
+		C2B35DEE21DEE99C00CFDF04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C2B35DF021DEE9E900CFDF04 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		C2B35DF221DEE9FA00CFDF04 /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
+		C2B35DF421DEEA4600CFDF04 /* FouTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FouTab.storyboard; sourceTree = "<group>"; };
+		C2B35DF621DEEA5600CFDF04 /* FifTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FifTab.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,13 +150,18 @@
 			isa = PBXGroup;
 			children = (
 				46D5314221C8756D0071F0DD /* AppDelegate.swift */,
+				C2B35DEE21DEE99C00CFDF04 /* ViewController.swift */,
 				4638324821C88106008569E7 /* FirstViewController.swift */,
 				4638324A21C88115008569E7 /* SecondViewController.swift */,
 				4638324C21C88129008569E7 /* ThirdViewController.swift */,
+				C2B35DF021DEE9E900CFDF04 /* FourthViewController.swift */,
+				C2B35DF221DEE9FA00CFDF04 /* FifthViewController.swift */,
 				46D5314621C8756D0071F0DD /* Main.storyboard */,
 				4638324221C87E85008569E7 /* FirstTab.storyboard */,
 				4638324421C87E97008569E7 /* SecTab.storyboard */,
 				4638324621C87EA5008569E7 /* ThrTab.storyboard */,
+				C2B35DF421DEEA4600CFDF04 /* FouTab.storyboard */,
+				C2B35DF621DEEA5600CFDF04 /* FifTab.storyboard */,
 				46D5314C21C8756F0071F0DD /* Assets.xcassets */,
 				46D5314E21C8756F0071F0DD /* LaunchScreen.storyboard */,
 				46D5315121C8756F0071F0DD /* Info.plist */,
@@ -295,6 +310,8 @@
 				4638324321C87E85008569E7 /* FirstTab.storyboard in Resources */,
 				46D5314D21C8756F0071F0DD /* Assets.xcassets in Resources */,
 				46D5314821C8756D0071F0DD /* Main.storyboard in Resources */,
+				C2B35DF721DEEA5600CFDF04 /* FifTab.storyboard in Resources */,
+				C2B35DF521DEEA4600CFDF04 /* FouTab.storyboard in Resources */,
 				4638324521C87E97008569E7 /* SecTab.storyboard in Resources */,
 				4638324721C87EA5008569E7 /* ThrTab.storyboard in Resources */,
 			);
@@ -398,8 +415,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2B35DEF21DEE99C00CFDF04 /* ViewController.swift in Sources */,
 				46D5314321C8756D0071F0DD /* AppDelegate.swift in Sources */,
 				46D5314B21C8756D0071F0DD /* dkddm.xcdatamodeld in Sources */,
+				C2B35DF121DEE9E900CFDF04 /* FourthViewController.swift in Sources */,
+				C2B35DF321DEE9FA00CFDF04 /* FifthViewController.swift in Sources */,
 				4638324B21C88115008569E7 /* SecondViewController.swift in Sources */,
 				4638324D21C88129008569E7 /* ThirdViewController.swift in Sources */,
 				4638324921C88106008569E7 /* FirstViewController.swift in Sources */,

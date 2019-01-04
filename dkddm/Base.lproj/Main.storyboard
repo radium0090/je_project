@@ -22,11 +22,13 @@
                         <segue destination="iYn-J7-JWU" kind="relationship" relationship="viewControllers" id="abs-43-ylf"/>
                         <segue destination="UJK-Ax-oVY" kind="relationship" relationship="viewControllers" id="RUU-6L-YAA"/>
                         <segue destination="VF1-At-Esd" kind="relationship" relationship="viewControllers" id="FkA-dv-grV"/>
+                        <segue destination="gXV-1b-9cs" kind="relationship" relationship="viewControllers" id="KPX-c4-OFg"/>
+                        <segue destination="r9l-rr-AjY" kind="relationship" relationship="viewControllers" id="ggI-A3-Cha"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kaw-EJ-eI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="814" y="133"/>
+            <point key="canvasLocation" x="756" y="48"/>
         </scene>
         <!--FirstTab-->
         <scene sceneID="ft6-Sk-Fy7">
@@ -36,7 +38,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sr7-Aq-cbP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1486" y="-71"/>
+            <point key="canvasLocation" x="1486" y="-110"/>
+        </scene>
+        <!--FouTab-->
+        <scene sceneID="SWH-iI-e8M">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FouTab" id="gXV-1b-9cs" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="3jB-Jf-pKA"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YBS-A1-C3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1482" y="123"/>
         </scene>
         <!--SecTab-->
         <scene sceneID="P1D-W0-Etu">
@@ -46,7 +58,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kFe-ob-TV0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1486" y="132"/>
+            <point key="canvasLocation" x="1482" y="-32"/>
+        </scene>
+        <!--FifTab-->
+        <scene sceneID="1oA-mx-CnT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FifTab" id="r9l-rr-AjY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="iFW-yb-u7N"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L15-3S-NiI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1477" y="196"/>
         </scene>
         <!--ThrTab-->
         <scene sceneID="BEx-iK-p2I">
@@ -56,7 +78,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l64-WW-02q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1486" y="352"/>
+            <point key="canvasLocation" x="1481" y="48"/>
         </scene>
     </scenes>
 </document>

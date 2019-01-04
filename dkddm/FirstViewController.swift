@@ -7,34 +7,18 @@
 //
 
 import UIKit
-import WebKit
 
-class FirstViewController: UIViewController, WKUIDelegate {
-    
-    private var webView: WKWebView!
-    
+class FirstViewController: ViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // WKWebViewを生成
-        webView = WKWebView(frame:CGRect(x:0, y:0, width:self.view.bounds.size.width, height:self.view.bounds.size.height))
-        
-        // URL設定
-        let urlString = "https://quinz.me/"
-        let encodedUrlString = urlString.addingPercentEncoding(withAllowedCharacters:NSCharacterSet.urlQueryAllowed)
-        
-        let url = NSURL(string: encodedUrlString!)
-        let request = NSURLRequest(url: url! as URL)
-        
-        webView.load(request as URLRequest)
-        
-        self.view.addSubview(webView)
-        
+        loadWebPage("https://japee.tokyo")
+        setNavBar()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 }
