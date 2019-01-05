@@ -14,7 +14,7 @@ class FirstViewController: ViewController {
         super.viewDidLoad()
         
         loadWebPage("https://japee.tokyo")
-        setNavBar()
+//        setNavBar()
     }
     
     override func didReceiveMemoryWarning() {

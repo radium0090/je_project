@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XJc-iB-jhq">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -27,46 +27,13 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kaw-EJ-eI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="756" y="48"/>
-        </scene>
-        <!--Bar Code View Controller-->
-        <scene sceneID="wSa-8s-qZU">
-            <objects>
-                <viewController id="YJV-Ik-jgg" customClass="BarCodeViewController" customModule="dkddm" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ABV-2i-iAl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c80-Tp-eF1">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzI-HQ-GHF">
-                                        <rect key="frame" x="317" y="8" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="kcD-og-EPU"/>
-                    </view>
-                    <connections>
-                        <outlet property="closeBtn" destination="DzI-HQ-GHF" id="gh6-UW-6We"/>
-                        <outlet property="preView" destination="c80-Tp-eF1" id="se4-Cn-L7B"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9Ps-xb-Zxi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="756" y="757.38916256157643"/>
+            <point key="canvasLocation" x="756" y="-32"/>
         </scene>
         <!--FirstTab-->
         <scene sceneID="ft6-Sk-Fy7">
             <objects>
                 <viewControllerPlaceholder storyboardName="FirstTab" id="iYn-J7-JWU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="dWN-UG-bjh"/>
+                    <tabBarItem key="tabBarItem" title="shop" selectedImage="home" id="dWN-UG-bjh"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sr7-Aq-cbP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -76,21 +43,60 @@
         <scene sceneID="P1D-W0-Etu">
             <objects>
                 <viewControllerPlaceholder storyboardName="SecTab" id="UJK-Ax-oVY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="9Fr-Nf-Y7J"/>
+                    <tabBarItem key="tabBarItem" title="cart" selectedImage="cart" id="9Fr-Nf-Y7J"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kFe-ob-TV0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1482" y="-32"/>
         </scene>
+        <!--Bar Code View Controller-->
+        <scene sceneID="KLD-JM-mQ9">
+            <objects>
+                <viewController id="5fN-Yq-b1M" customClass="BarCodeViewController" customModule="dkddm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="INP-5I-IdR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kE6-tG-fNG">
+                                <rect key="frame" x="0.0" y="20" width="375" height="627"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="464-R4-fXv">
+                                        <rect key="frame" x="325" y="8" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="6Rg-cB-d5p"/>
+                    </view>
+                    <connections>
+                        <outlet property="closeBtn" destination="464-R4-fXv" id="6I9-0o-1fG"/>
+                        <outlet property="preView" destination="kE6-tG-fNG" id="DCy-AI-pxm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ahu-S4-4Gk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="756" y="653.52323838080963"/>
+        </scene>
         <!--ThrTab-->
         <scene sceneID="BEx-iK-p2I">
             <objects>
                 <viewControllerPlaceholder storyboardName="ThrTab" id="VF1-At-Esd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="SbJ-Tl-8Td"/>
+                    <tabBarItem key="tabBarItem" title="my" selectedImage="my" id="SbJ-Tl-8Td"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l64-WW-02q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1481" y="48"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cart" width="48" height="48"/>
+        <image name="home" width="48" height="48"/>
+        <image name="my" width="48" height="48"/>
+    </resources>
 </document>

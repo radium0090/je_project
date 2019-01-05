@@ -18,14 +18,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        self.setNavBar()
     }
     
     func loadWebPage(_ urlString: String) {
         // WKWebView生成
         let navHeight = self.navigationController?.navigationBar.frame.height
         let statusHeight = UIApplication.shared.statusBarFrame.height
-        webView = WKWebView(frame:CGRect(x:0, y:navHeight!+statusHeight, width:self.view.bounds.size.width, height:self.view.bounds.size.height))
+        webView = WKWebView(frame:CGRect(x: 0, y: navHeight!+statusHeight, width: self.view.bounds.size.width, height: self.view.bounds.size.height))
         webView.navigationDelegate = self
         
         // URL設定
@@ -36,38 +36,41 @@ class ViewController: UIViewController {
         self.view.addSubview(webView)
     }
     
-    func setNavBar() {
-//        btnBack = UIBarButtonItem(title: "<", style: UIBarButtonItem.Style.plain, target: self, action: Selector(("toBack")))
-//        btnForward = UIBarButtonItem(title: ">", style: UIBarButtonItem.Style.plain, target: self, action: Selector(("toForward")))
-//        self.navigationItem.leftBarButtonItem = btnBack
-//        self.navigationItem.rightBarButtonItem = btnForward
-//        navigationController?.navigationBar.barTintColor = UIColor.green
-//        UINavigationBar.appearance().setBackgroundImage(UIImage(named: "naviBarBg")!.resizableImage(withCapInsets: UIEdgeInsets.zero, resizingMode: .stretch), for: .default)
+    @objc func setNavBar() {
+        // set custom btn
+        let button: UIButton = UIButton(type: .custom)
+        // set image for btn
+        button.setImage(UIImage(named: "scanner"), for: .normal)
+        // add function for btn
+        button.addTarget(self, action: #selector(ViewController.clickScan), for: .touchUpInside)
+        // set btn frame
+        button.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        let barButton = UIBarButtonItem(customView: button)
+        //assign button to navigationbar
+        self.navigationItem.leftBarButtonItem = barButton
+        // set right btn
+        let refreshButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.refresh, target: self, action: #selector(ViewController.clickRefresh))
+        refreshButton.tintColor = UIColor.black
+        self.navigationItem.rightBarButtonItem = refreshButton
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(named: "naviBarBg"), for: .default)
     }
     
-//    func toBack() {
-//        if webView.canGoBack {
-//            webView.goBack()
-//        }
-//    }
-//
-//    func toForward() {
-//        if webView.canGoForward {
-//            webView.goForward()
-//        }
-//    }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func clickScan(){
+        //searchButtonを押した際の処理を記述
+        print("clickScan pressed.....")
+        self.present(BarCodeViewController(), animated: true, completion: nil)
     }
-    */
+    
+    @objc func clickRefresh() {
+        print("clickRefresh pressed.....")
+        if webView.url != nil {
+            webView.reload()
+        } else {
+            webView.load(URLRequest(url: URL(string: "https://japee.tokyo")!))
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -107,14 +110,6 @@ extension ViewController: WKUIDelegate {
 extension ViewController: WKNavigationDelegate {
 //  1
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: (WKNavigationActionPolicy) -> Void) {
-//        if let urlStr = navigationAction.request.url?.absoluteString {
-//            print("请求之前调用，决定是否要跳转,拦截到请求url--》", urlStr)
-//            if urlStr != "japee.tokyo" {
-//                decisionHandler(.cancel)
-//            }
-//        }else {
-//            print("请求之前调用，决定是否要跳转,未取到url!!!!")
-//        }
         //必须调用回调
         decisionHandler(.allow)
     }
@@ -143,7 +138,7 @@ extension ViewController: WKNavigationDelegate {
         
 //  5
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        self.navigationItem.title = webView.title
+        self.navigationItem.title = "JaPee"
     }
     
 //  6
