@@ -90,15 +90,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    func didSelectTab(tabBarController: UITabBarController) {
-        
-    }
-    
     func setTabBar() {
         if let initialTab = self.window!.rootViewController as? UITabBarController {
             initialTab.selectedIndex = 0
         }
     }
-
 }
 

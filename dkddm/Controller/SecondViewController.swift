@@ -7,15 +7,17 @@
 //
 
 import UIKit
-import WebKit
 
 class SecondViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        URLCache.shared.removeAllCachedResponses()
         loadWebPage("https://japee.tokyo/cart/")
-        print("2222222222")
     }
     
     override func didReceiveMemoryWarning() {

@@ -25,25 +25,15 @@ class ViewController: UITabBarController, UITabBarControllerDelegate {
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         let tabBarIndex = tabBarController.selectedIndex
-        print("111111: \(tabBarIndex)")
         
         if tabBarIndex == 0 {
-//            WKWebsiteDataStore.default().removeData(ofTypes: [WKWebsiteDataTypeDiskCache, WKWebsiteDataTypeMemoryCache], modifiedSince: Date(timeIntervalSince1970: 0), completionHandler: {})
             self.webView.load(URLRequest(url: URL(string: "https://japee.tokyo")!, cachePolicy: .reloadRevalidatingCacheData, timeoutInterval: 10.0))
-            print("c = 0 : \(String(describing: self.webView.url))")
-            self.loadWebPage("https://japee.tokyo")
         }
-        
         if tabBarIndex == 1 {
-            self.webView.load(URLRequest(url: URL(string: "https://japee.tokyo/cart/")!))
-            print("c = 1 : \(String(describing: self.webView.url))")
-            self.loadWebPage("https://japee.tokyo/cart/")
+            self.webView.load(URLRequest(url: URL(string: "https://japee.tokyo/cart/")!, cachePolicy: .reloadRevalidatingCacheData, timeoutInterval: 10.0))
         }
-        
         if tabBarIndex == 2 {
-            self.webView.load(URLRequest(url: URL(string: "https://japee.tokyo/my-account/")!))
-            print("c = 2 : \(String(describing: self.webView.url))")
-            self.loadWebPage("https://japee.tokyo/my-account/")
+            self.webView.load(URLRequest(url: URL(string: "https://japee.tokyo/my-account/")!, cachePolicy: .reloadRevalidatingCacheData, timeoutInterval: 10.0))
         }
     }
     
@@ -60,9 +50,9 @@ class ViewController: UITabBarController, UITabBarControllerDelegate {
         let request = NSURLRequest(url: url! as URL)
         webView.load(request as URLRequest)
         self.view.addSubview(webView)
-        
+        // KVO
         self.webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
-        
+        // Set progress bar
         self.progressView = UIProgressView(frame: CGRect(x: 0.0, y: self.navigationController!.navigationBar.frame.size.height - 3.0, width: self.view.frame.size.width, height: 3.0))
         self.progressView.progressViewStyle = .bar
         self.progressView.trackTintColor = UIColor.white
@@ -75,18 +65,14 @@ class ViewController: UITabBarController, UITabBarControllerDelegate {
         if (keyPath == "estimatedProgress") {
             // alphaを1にする(表示)
             self.progressView.alpha = 1.0
+            progressView.isHidden = webView.estimatedProgress == 1
             // estimatedProgressが変更されたときにプログレスバーの値を変更
             self.progressView.setProgress(Float(self.webView.estimatedProgress), animated: true)
             
             // estimatedProgressが1.0になったらアニメーションを使って非表示にしアニメーション完了時0.0をセットする
             if (self.webView.estimatedProgress >= 1.0) {
-                UIView.animate(withDuration: 0.3,
-                               delay: 0.3,
-                               options: [.curveEaseOut],
-                               animations: { [weak self] in
-                                self?.progressView.alpha = 0.0
-                    }, completion: {
-                        (finished : Bool) in
+                UIView.animate(withDuration: 0.3, delay: 0.3, options: [.curveEaseOut], animations: { [weak self] in
+                    self?.progressView.alpha = 0.0 }, completion: { (finished : Bool) in
                         self.progressView.setProgress(0.0, animated: false)
                 })
             }
