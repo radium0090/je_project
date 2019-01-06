@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  ThirdViewController.swift
 //  dkddm
 //
 //  Created by 是レイ on 2018/12/18.
@@ -7,14 +7,14 @@
 //
 
 import UIKit
+import WebKit
 
-class FirstViewController: ViewController {
-
+class ThirdViewController: ViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadWebPage("https://japee.tokyo")
-//        setNavBar()
+        loadWebPage("https://japee.tokyo/my-account/")
     }
     
     override func didReceiveMemoryWarning() {

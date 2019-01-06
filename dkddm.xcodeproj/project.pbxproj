@@ -143,16 +143,11 @@
 		46D5314121C8756D0071F0DD /* dkddm */ = {
 			isa = PBXGroup;
 			children = (
+				EE7862EB21E19CEF0051AF5F /* Storyboard */,
+				EE7862EA21E19CC00051AF5F /* Controller */,
 				46D5314221C8756D0071F0DD /* AppDelegate.swift */,
 				C2B35DEE21DEE99C00CFDF04 /* ViewController.swift */,
-				4638324821C88106008569E7 /* FirstViewController.swift */,
-				4638324A21C88115008569E7 /* SecondViewController.swift */,
-				4638324C21C88129008569E7 /* ThirdViewController.swift */,
-				EE7862E821E058780051AF5F /* BarCodeViewController.swift */,
 				46D5314621C8756D0071F0DD /* Main.storyboard */,
-				4638324221C87E85008569E7 /* FirstTab.storyboard */,
-				4638324421C87E97008569E7 /* SecTab.storyboard */,
-				4638324621C87EA5008569E7 /* ThrTab.storyboard */,
 				46D5314C21C8756F0071F0DD /* Assets.xcassets */,
 				46D5314E21C8756F0071F0DD /* LaunchScreen.storyboard */,
 				46D5315121C8756F0071F0DD /* Info.plist */,
@@ -187,6 +182,27 @@
 				462DC85D6736DF1D2CC1108E /* Pods_dkddmUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE7862EA21E19CC00051AF5F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4638324821C88106008569E7 /* FirstViewController.swift */,
+				4638324A21C88115008569E7 /* SecondViewController.swift */,
+				4638324C21C88129008569E7 /* ThirdViewController.swift */,
+				EE7862E821E058780051AF5F /* BarCodeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EE7862EB21E19CEF0051AF5F /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4638324421C87E97008569E7 /* SecTab.storyboard */,
+				4638324221C87E85008569E7 /* FirstTab.storyboard */,
+				4638324621C87EA5008569E7 /* ThrTab.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

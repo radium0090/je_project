@@ -9,8 +9,9 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController {
+class ViewController: UITabBarController, UITabBarControllerDelegate {
     private var webView: WKWebView!
+    var progressView = UIProgressView()
     var btnBack = UIBarButtonItem()
     var btnForward = UIBarButtonItem()
 
@@ -18,7 +19,32 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.tabBarController?.delegate = self
         self.setNavBar()
+    }
+    
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        let tabBarIndex = tabBarController.selectedIndex
+        print("111111: \(tabBarIndex)")
+        
+        if tabBarIndex == 0 {
+//            WKWebsiteDataStore.default().removeData(ofTypes: [WKWebsiteDataTypeDiskCache, WKWebsiteDataTypeMemoryCache], modifiedSince: Date(timeIntervalSince1970: 0), completionHandler: {})
+            self.webView.load(URLRequest(url: URL(string: "https://japee.tokyo")!, cachePolicy: .reloadRevalidatingCacheData, timeoutInterval: 10.0))
+            print("c = 0 : \(String(describing: self.webView.url))")
+            self.loadWebPage("https://japee.tokyo")
+        }
+        
+        if tabBarIndex == 1 {
+            self.webView.load(URLRequest(url: URL(string: "https://japee.tokyo/cart/")!))
+            print("c = 1 : \(String(describing: self.webView.url))")
+            self.loadWebPage("https://japee.tokyo/cart/")
+        }
+        
+        if tabBarIndex == 2 {
+            self.webView.load(URLRequest(url: URL(string: "https://japee.tokyo/my-account/")!))
+            print("c = 2 : \(String(describing: self.webView.url))")
+            self.loadWebPage("https://japee.tokyo/my-account/")
+        }
     }
     
     func loadWebPage(_ urlString: String) {
@@ -34,6 +60,37 @@ class ViewController: UIViewController {
         let request = NSURLRequest(url: url! as URL)
         webView.load(request as URLRequest)
         self.view.addSubview(webView)
+        
+        self.webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
+        
+        self.progressView = UIProgressView(frame: CGRect(x: 0.0, y: self.navigationController!.navigationBar.frame.size.height - 3.0, width: self.view.frame.size.width, height: 3.0))
+        self.progressView.progressViewStyle = .bar
+        self.progressView.trackTintColor = UIColor.white
+        self.progressView.progressTintColor = UIColor.green
+        self.navigationController?.navigationBar.addSubview(self.progressView)
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        // ここでUIProgressViewに値を入れるコードを書く
+        if (keyPath == "estimatedProgress") {
+            // alphaを1にする(表示)
+            self.progressView.alpha = 1.0
+            // estimatedProgressが変更されたときにプログレスバーの値を変更
+            self.progressView.setProgress(Float(self.webView.estimatedProgress), animated: true)
+            
+            // estimatedProgressが1.0になったらアニメーションを使って非表示にしアニメーション完了時0.0をセットする
+            if (self.webView.estimatedProgress >= 1.0) {
+                UIView.animate(withDuration: 0.3,
+                               delay: 0.3,
+                               options: [.curveEaseOut],
+                               animations: { [weak self] in
+                                self?.progressView.alpha = 0.0
+                    }, completion: {
+                        (finished : Bool) in
+                        self.progressView.setProgress(0.0, animated: false)
+                })
+            }
+        }
     }
     
     @objc func setNavBar() {
@@ -69,6 +126,12 @@ class ViewController: UIViewController {
         } else {
             webView.load(URLRequest(url: URL(string: "https://japee.tokyo")!))
         }
+    }
+    
+    deinit{
+        //消さないと、アプリが落ちる
+        self.webView.removeObserver(self, forKeyPath: "estimatedProgress")
+        self.progressView.reloadInputViews()
     }
     
     override func didReceiveMemoryWarning() {
@@ -138,6 +201,7 @@ extension ViewController: WKNavigationDelegate {
         
 //  5
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        self.progressView.setProgress(0.0, animated: false)
         self.navigationItem.title = "JaPee"
     }
     

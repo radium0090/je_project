@@ -16,9 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        if let initialTab = self.window!.rootViewController as? UITabBarController {
-            initialTab.selectedIndex = 0
-        }
+        self.setTabBar()
         
         return true
     }
@@ -94,6 +92,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func didSelectTab(tabBarController: UITabBarController) {
         
+    }
+    
+    func setTabBar() {
+        if let initialTab = self.window!.rootViewController as? UITabBarController {
+            initialTab.selectedIndex = 0
+        }
     }
 
 }

@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  FirstViewController.swift
 //  dkddm
 //
 //  Created by 是レイ on 2018/12/18.
@@ -7,15 +7,13 @@
 //
 
 import UIKit
-import WebKit
 
-class SecondViewController: ViewController {
-    
+class FirstViewController: ViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadWebPage("https://japee.tokyo/cart/")
-//        setNavBar()
+        loadWebPage("https://japee.tokyo")
     }
     
     override func didReceiveMemoryWarning() {
