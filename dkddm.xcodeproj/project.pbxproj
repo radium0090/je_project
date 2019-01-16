@@ -14,6 +14,7 @@
 		4638324921C88106008569E7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4638324821C88106008569E7 /* FirstViewController.swift */; };
 		4638324B21C88115008569E7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4638324A21C88115008569E7 /* SecondViewController.swift */; };
 		4638324D21C88129008569E7 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4638324C21C88129008569E7 /* ThirdViewController.swift */; };
+		464B083C21EF2728002836AE /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464B083B21EF2728002836AE /* CameraViewController.swift */; };
 		46D5314321C8756D0071F0DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D5314221C8756D0071F0DD /* AppDelegate.swift */; };
 		46D5314821C8756D0071F0DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46D5314621C8756D0071F0DD /* Main.storyboard */; };
 		46D5314B21C8756D0071F0DD /* dkddm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 46D5314921C8756D0071F0DD /* dkddm.xcdatamodeld */; };
@@ -24,7 +25,6 @@
 		BF517B92B6ADFD25466494FE /* Pods_dkddmUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462DC85D6736DF1D2CC1108E /* Pods_dkddmUITests.framework */; };
 		C2B35DEF21DEE99C00CFDF04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B35DEE21DEE99C00CFDF04 /* ViewController.swift */; };
 		D506F16941831E366B7F63C0 /* Pods_dkddmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B5ADDB7F255BEAF8CFA4C1 /* Pods_dkddmTests.framework */; };
-		EE7862E921E058780051AF5F /* BarCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7862E821E058780051AF5F /* BarCodeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +53,7 @@
 		4638324821C88106008569E7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		4638324A21C88115008569E7 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		4638324C21C88129008569E7 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		464B083B21EF2728002836AE /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		46D5313F21C8756D0071F0DD /* dkddm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dkddm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46D5314221C8756D0071F0DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46D5314721C8756D0071F0DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,7 +75,6 @@
 		A49DDD7BFE926CAB5549A17D /* Pods-dkddmUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dkddmUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-dkddmUITests/Pods-dkddmUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AAA58D684352B088683DC3A5 /* Pods-dkddmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dkddmTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-dkddmTests/Pods-dkddmTests.release.xcconfig"; sourceTree = "<group>"; };
 		C2B35DEE21DEE99C00CFDF04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EE7862E821E058780051AF5F /* BarCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +147,7 @@
 				EE7862EA21E19CC00051AF5F /* Controller */,
 				46D5314221C8756D0071F0DD /* AppDelegate.swift */,
 				C2B35DEE21DEE99C00CFDF04 /* ViewController.swift */,
+				464B083B21EF2728002836AE /* CameraViewController.swift */,
 				46D5314621C8756D0071F0DD /* Main.storyboard */,
 				46D5314C21C8756F0071F0DD /* Assets.xcassets */,
 				46D5314E21C8756F0071F0DD /* LaunchScreen.storyboard */,
@@ -190,7 +191,6 @@
 				4638324821C88106008569E7 /* FirstViewController.swift */,
 				4638324A21C88115008569E7 /* SecondViewController.swift */,
 				4638324C21C88129008569E7 /* ThirdViewController.swift */,
-				EE7862E821E058780051AF5F /* BarCodeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -424,7 +424,7 @@
 				46D5314321C8756D0071F0DD /* AppDelegate.swift in Sources */,
 				46D5314B21C8756D0071F0DD /* dkddm.xcdatamodeld in Sources */,
 				4638324B21C88115008569E7 /* SecondViewController.swift in Sources */,
-				EE7862E921E058780051AF5F /* BarCodeViewController.swift in Sources */,
+				464B083C21EF2728002836AE /* CameraViewController.swift in Sources */,
 				4638324D21C88129008569E7 /* ThirdViewController.swift in Sources */,
 				4638324921C88106008569E7 /* FirstViewController.swift in Sources */,
 			);

@@ -8,12 +8,20 @@
 
 import UIKit
 import WebKit
+import AVFoundation
 
 class ViewController: UITabBarController, UITabBarControllerDelegate {
     private var webView: WKWebView!
     var progressView = UIProgressView()
     var btnBack = UIBarButtonItem()
     var btnForward = UIBarButtonItem()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        setLoadingView()
+        let nc = NotificationCenter.default
+        nc.addObserver(self, selector: #selector(ViewController.showCameraViewConfirmation), name: NSNotification.Name(rawValue: "kUrlSchemeShowCameraView"), object: nil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,7 +110,7 @@ class ViewController: UITabBarController, UITabBarControllerDelegate {
     @objc func clickScan(){
         //searchButtonを押した際の処理を記述
         print("clickScan pressed.....")
-        self.present(BarCodeViewController(), animated: true, completion: nil)
+        showCameraViewConfirmation()
     }
     
     @objc func clickRefresh() {
@@ -123,6 +131,65 @@ class ViewController: UITabBarController, UITabBarControllerDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @objc func showCameraViewConfirmation() {
+        let status: AVAuthorizationStatus = AVCaptureDevice.authorizationStatus(for: .video)
+        switch status {
+        case .authorized:
+            showCameraViewExecution(true)
+        case .restricted:
+            break
+        case .denied:
+            showCameraViewExecution(false)
+        case .notDetermined:
+            AVCaptureDevice.requestAccess(for: .video, completionHandler: { permission in
+                if permission {
+                    self.showCameraViewExecution(true)
+                } else {
+                    self.showCameraViewExecution(false)
+                }
+            })
+        }
+    }
+    
+    func showCameraViewExecution(_ canUseMediaTypeVideo: Bool) {
+        if canUseMediaTypeVideo {
+            let cameraViewController = storyboard!.instantiateViewController(withIdentifier: "CameraViewController") as? CameraViewController
+            cameraViewController?.handler = { value in
+                self.dismiss(animated: true) {
+                    //https://japee.tokyo/product/4901351058640-3set/
+                    let url = URL(string: "https://japee.tokyo/product/\(value ?? "")")
+                    var request: URLRequest? = nil
+                    if let anUrl = url {
+                        request = URLRequest(url: anUrl)
+                    }
+                    if let aRequest = request {
+                        self.webView?.load(aRequest)
+                    }
+                }
+            }
+            DispatchQueue.main.async(execute: {
+                // メインスレッドで処理をしたいUI変更。
+                if let aController = cameraViewController {
+                    self.present(aController, animated: true)
+                }
+            })
+        } else {
+            let alertController = UIAlertController(title: NSLocalizedString("Can not access to the camera", comment: "カメラにアクセスできません"), message: NSLocalizedString("Please allow access to the camera from the setting.", comment: "設定画面からカメラへのアクセスを許可してください。"), preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "はい"), style: .default, handler: nil))
+            alertController.addAction(UIAlertAction(title: NSLocalizedString("Setting", comment: "設定"), style: .default, handler: { action in
+                let url = URL(string: "app-settings:Privacy")
+                if let anUrl = url {
+                    UIApplication.shared.openURL(anUrl)
+                }
+            }))
+            present(alertController, animated: true)
+        }
+    }
+    
+    @IBAction func cancelCameraView(_ segue: UIStoryboardSegue) {
+        dismiss(animated: true)
     }
 }
 
