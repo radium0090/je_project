@@ -62,7 +62,7 @@
         <!--Camera View Controller-->
         <scene sceneID="0B4-rc-s1U">
             <objects>
-                <viewController storyboardIdentifier="CameraViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WkK-xm-Z6i" customClass="CameraViewController" customModule="DOKODEMO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="cvc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WkK-xm-Z6i" customClass="CameraViewController" customModule="dkddm" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zkO-Dp-4Ib"/>
                         <viewControllerLayoutGuide type="bottom" id="Tpa-WD-lR0"/>

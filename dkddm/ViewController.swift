@@ -155,7 +155,8 @@ class ViewController: UITabBarController, UITabBarControllerDelegate {
     
     func showCameraViewExecution(_ canUseMediaTypeVideo: Bool) {
         if canUseMediaTypeVideo {
-            let cameraViewController = storyboard!.instantiateViewController(withIdentifier: "CameraViewController") as? CameraViewController
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let cameraViewController = storyboard.instantiateViewController(withIdentifier: "cvc") as? CameraViewController
             cameraViewController?.handler = { value in
                 self.dismiss(animated: true) {
                     //https://japee.tokyo/product/4901351058640-3set/
