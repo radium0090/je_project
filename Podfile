@@ -7,6 +7,7 @@ target 'dkddm' do
 
   # Pods for dkddm
   pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
 
 
   target 'dkddmTests' do
