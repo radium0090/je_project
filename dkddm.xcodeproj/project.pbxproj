@@ -25,6 +25,8 @@
 		BF517B92B6ADFD25466494FE /* Pods_dkddmUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462DC85D6736DF1D2CC1108E /* Pods_dkddmUITests.framework */; };
 		C2B35DEF21DEE99C00CFDF04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B35DEE21DEE99C00CFDF04 /* ViewController.swift */; };
 		D506F16941831E366B7F63C0 /* Pods_dkddmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B5ADDB7F255BEAF8CFA4C1 /* Pods_dkddmTests.framework */; };
+		EEB8849D2236908200FCF20A /* FouTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEB8849C2236908200FCF20A /* FouTab.storyboard */; };
+		EEB8849F223D1BB000FCF20A /* FouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8849E223D1BB000FCF20A /* FouViewController.swift */; };
 		EEE0ECC0220199BB00DF7F57 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEE0ECBF220199BA00DF7F57 /* GoogleService-Info.plist */; };
 		EEE0ECC1220199BB00DF7F57 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEE0ECBF220199BA00DF7F57 /* GoogleService-Info.plist */; };
 		EEE0ECC2220199BB00DF7F57 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEE0ECBF220199BA00DF7F57 /* GoogleService-Info.plist */; };
@@ -79,6 +81,8 @@
 		AAA58D684352B088683DC3A5 /* Pods-dkddmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dkddmTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-dkddmTests/Pods-dkddmTests.release.xcconfig"; sourceTree = "<group>"; };
 		C2B35DEE21DEE99C00CFDF04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EEB596142201A54C00DDECDE /* dkddm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = dkddm.entitlements; sourceTree = "<group>"; };
+		EEB8849C2236908200FCF20A /* FouTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FouTab.storyboard; sourceTree = "<group>"; };
+		EEB8849E223D1BB000FCF20A /* FouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FouViewController.swift; sourceTree = "<group>"; };
 		EEE0ECBF220199BA00DF7F57 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,6 +202,7 @@
 				4638324821C88106008569E7 /* FirstViewController.swift */,
 				4638324A21C88115008569E7 /* SecondViewController.swift */,
 				4638324C21C88129008569E7 /* ThirdViewController.swift */,
+				EEB8849E223D1BB000FCF20A /* FouViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 				4638324421C87E97008569E7 /* SecTab.storyboard */,
 				4638324221C87E85008569E7 /* FirstTab.storyboard */,
 				4638324621C87EA5008569E7 /* ThrTab.storyboard */,
+				EEB8849C2236908200FCF20A /* FouTab.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -332,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46D5315021C8756F0071F0DD /* LaunchScreen.storyboard in Resources */,
+				EEB8849D2236908200FCF20A /* FouTab.storyboard in Resources */,
 				4638324321C87E85008569E7 /* FirstTab.storyboard in Resources */,
 				46D5314D21C8756F0071F0DD /* Assets.xcassets in Resources */,
 				46D5314821C8756D0071F0DD /* Main.storyboard in Resources */,
@@ -446,6 +453,7 @@
 				C2B35DEF21DEE99C00CFDF04 /* ViewController.swift in Sources */,
 				46D5314321C8756D0071F0DD /* AppDelegate.swift in Sources */,
 				46D5314B21C8756D0071F0DD /* dkddm.xcdatamodeld in Sources */,
+				EEB8849F223D1BB000FCF20A /* FouViewController.swift in Sources */,
 				4638324B21C88115008569E7 /* SecondViewController.swift in Sources */,
 				464B083C21EF2728002836AE /* CameraViewController.swift in Sources */,
 				4638324D21C88129008569E7 /* ThirdViewController.swift in Sources */,

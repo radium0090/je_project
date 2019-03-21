@@ -23,6 +23,7 @@
                         <segue destination="iYn-J7-JWU" kind="relationship" relationship="viewControllers" id="abs-43-ylf"/>
                         <segue destination="UJK-Ax-oVY" kind="relationship" relationship="viewControllers" id="RUU-6L-YAA"/>
                         <segue destination="VF1-At-Esd" kind="relationship" relationship="viewControllers" id="FkA-dv-grV"/>
+                        <segue destination="DSQ-Su-ExP" kind="relationship" relationship="viewControllers" id="w6q-Ia-2hf"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kaw-EJ-eI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -58,6 +59,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l64-WW-02q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1481" y="48"/>
+        </scene>
+        <!--FouTab-->
+        <scene sceneID="Ua0-O0-zGR">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FouTab" id="DSQ-Su-ExP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="pRs-Lf-aRO"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zdt-Qi-Jkh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1482" y="132"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="0B4-rc-s1U">
