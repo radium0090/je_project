@@ -153,6 +153,7 @@ extension CollectionViewController {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCollectionViewCell, for: indexPath) as! CollectionViewCell
         let model = collectionDatas[indexPath.section][indexPath.row]
+        print("888 : \(model.url)")
         cell.setDatas(model)
         return cell
     }
@@ -190,6 +191,13 @@ extension CollectionViewController {
         if isScrollDown && (collectionView.isDragging || collectionView.isDecelerating) {
             selectRow(index: indexPath.section + 1)
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let nextWeb = WebViewController()
+        nextWeb.urlParam = collectionDatas[indexPath.section][indexPath.row].url
+        self.navigationController?.pushViewController(nextWeb, animated: true)
+        self.collectionView.deselectItem(at: indexPath, animated: true)
     }
     
     // 当拖动 CollectionView 的时候，处理 TableView

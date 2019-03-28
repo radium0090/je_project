@@ -53,11 +53,13 @@ class SubCategoryModel: NSObject {
     
     var iconUrl : String?
     var name : String?
+    var url : String?
     
     init(dict : [String : Any]) {
         super.init()
         self.iconUrl = dict["icon_url"] as? String
         self.name = dict["name"] as? String
+        self.url = dict["url"] as? String
 //        setValuesForKeys(dict)
     }
     

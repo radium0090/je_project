@@ -38,6 +38,7 @@
 		EE7DDF6F224CA00500BC44D6 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7DDF6E224CA00500BC44D6 /* CategoryModel.swift */; };
 		EE7DDF71224CA03C00BC44D6 /* TableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7DDF70224CA03C00BC44D6 /* TableViewHeaderView.swift */; };
 		EE7DDF73224CA05F00BC44D6 /* RightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7DDF72224CA05F00BC44D6 /* RightTableViewCell.swift */; };
+		EE7DDF75224D052800BC44D6 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7DDF74224D052800BC44D6 /* WebViewController.swift */; };
 		EEB8849D2236908200FCF20A /* FouTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEB8849C2236908200FCF20A /* FouTab.storyboard */; };
 		EEB8849F223D1BB000FCF20A /* FouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8849E223D1BB000FCF20A /* FouViewController.swift */; };
 		EEE0ECC0220199BB00DF7F57 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEE0ECBF220199BA00DF7F57 /* GoogleService-Info.plist */; };
@@ -106,6 +107,7 @@
 		EE7DDF6E224CA00500BC44D6 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		EE7DDF70224CA03C00BC44D6 /* TableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHeaderView.swift; sourceTree = "<group>"; };
 		EE7DDF72224CA05F00BC44D6 /* RightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightTableViewCell.swift; sourceTree = "<group>"; };
+		EE7DDF74224D052800BC44D6 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		EEB596142201A54C00DDECDE /* dkddm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = dkddm.entitlements; sourceTree = "<group>"; };
 		EEB8849C2236908200FCF20A /* FouTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FouTab.storyboard; sourceTree = "<group>"; };
 		EEB8849E223D1BB000FCF20A /* FouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FouViewController.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				4638324A21C88115008569E7 /* SecondViewController.swift */,
 				4638324C21C88129008569E7 /* ThirdViewController.swift */,
 				EEB8849E223D1BB000FCF20A /* FouViewController.swift */,
+				EE7DDF74224D052800BC44D6 /* WebViewController.swift */,
 				EE7DDF58224C8B9000BC44D6 /* Category */,
 			);
 			path = Controller;
@@ -512,6 +515,7 @@
 				EE7DDF69224C970700BC44D6 /* LeftTableViewCell.swift in Sources */,
 				EE7DDF5A224C8BAF00BC44D6 /* CollectionViewController.swift in Sources */,
 				EE7DDF6D224C9FD100BC44D6 /* TableViewController.swift in Sources */,
+				EE7DDF75224D052800BC44D6 /* WebViewController.swift in Sources */,
 				C2B35DEF21DEE99C00CFDF04 /* ViewController.swift in Sources */,
 				EE7DDF61224C8CB700BC44D6 /* CollectionViewCell.swift in Sources */,
 				46D5314321C8756D0071F0DD /* AppDelegate.swift in Sources */,
