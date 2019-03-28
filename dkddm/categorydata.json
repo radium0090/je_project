@@ -1,0 +1,314 @@
+{
+    "code": 200,
+    "data": {
+        "categories": [
+            {
+                "icon_url": "http://img03.liwushuo.com/image/150615/3nc5tejwl.png-pw144",
+                "id": 1,
+                "name": "Confectionery",
+                "order": 11,
+                "status": 0,
+                "subcategories": [
+                    {
+                        "icon_url": "http://img02.liwushuo.com/image/150615/urgs9vy8a.png-pw144",
+                        "name": "Biscuits",
+                        "order": 7,
+                        "parent_id": 1,
+                        "url": "https://japee.tokyo/product-category/japanesefoods/confectionery/biscuits/",
+                        "img": "bis",
+                        "status": 0
+                    },
+                    {
+                        "icon_url": "http://img01.liwushuo.com/image/150615/d4dhjw1we.png-pw144",
+                        "name": "Candy",
+                        "order": 6,
+                        "parent_id": 1,
+                        "url": "https://japee.tokyo/product-category/japanesefoods/confectionery/candy/",
+                        "img": "candy",
+                        "status": 0
+                    },
+                    {
+                        "icon_url": "http://img02.liwushuo.com/image/150626/itxjlg4jh.png-pw144",
+                        "name": "Candy Mints",
+                        "order": 5,
+                        "parent_id": 1,
+                        "url": "https://japee.tokyo/product-category/japanesefoods/confectionery/candy-mints/",
+                        "img": "mint",
+                        "status": 0
+                    },
+                    {
+                        "icon_url": "http://img01.liwushuo.com/image/150615/12vqbzrkq.png-pw144",
+                        "name": "Caramel",
+                        "order": 4,
+                        "parent_id": 1,
+                        "url": "https://japee.tokyo/product-category/japanesefoods/confectionery/caramel/",
+                        "img": "caramel",
+                        "status": 0
+                    },
+                    {
+                        "icon_url": "http://img03.liwushuo.com/image/150312/xdjtcaanm.png-pw144",
+                        "name": "Chocolate",
+                        "order": 3,
+                        "parent_id": 1,
+                        "url": "https://japee.tokyo/product-category/japanesefoods/confectionery/chocolate/",
+                        "img": "chocolate",
+                        "status": 0
+                    },
+                    {
+                        "icon_url": "http://img01.liwushuo.com/image/150615/dsu66u5k2.png-pw144",
+                        "name": "Gum",
+                        "order": 2,
+                        "parent_id": 1,
+                        "url": "https://japee.tokyo/product-category/japanesefoods/confectionery/gum/",
+                        "img": "gum",
+                        "status": 0
+                    },
+                    {
+                        "icon_url": "http://img01.liwushuo.com/image/150615/dsu66u5k2.png-pw144",
+                        "name": "Gummy",
+                        "order": 2,
+                        "parent_id": 1,
+                        "url": "https://japee.tokyo/product-category/japanesefoods/confectionery/gummy/",
+                        "img": "gummy",
+                        "status": 0
+                    },
+                    {
+                        "icon_url": "http://img01.liwushuo.com/image/150615/dsu66u5k2.png-pw144",
+                        "name": "Snack",
+                        "order": 2,
+                        "parent_id": 1,
+                        "url": "https://japee.tokyo/product-category/japanesefoods/confectionery/snack/",
+                        "img": "snack",
+                        "status": 0
+                    }
+                ]
+            },
+            {
+                "icon_url": "http://img01.liwushuo.com/image/150427/as9ys97f0.png-pw144",
+                "id": 2,
+                "name": "Japanese Noodles",
+                "order": 10,
+                "status": 0,
+                "subcategories": [
+                    {
+                        "icon_url": "http://img03.liwushuo.com/image/150615/80mkxagby.png-pw144",
+                        "name": "Udon Noodles",
+                        "order": 6,
+                        "parent_id": 2,
+                        "url": "https://japee.tokyo/product-category/japanesefoods/japanese-noodles/udon-noodles/",
+                        "img": "",
+                        "status": 0
+                    },
+                    {
+                        "icon_url": "http://img03.liwushuo.com/image/150615/vprcl0vym.png-pw144",
+                        "name": "Ramen Noodles",
+                        "order": 5,
+                        "parent_id": 2,
+                        "url": "https://japee.tokyo/product-category/japanesefoods/japanese-noodles/japanese-ramen-noodles/",
+                        "img": "",
+                        "status": 0
+                    },
+                    {
+                        "icon_url": "http://img01.liwushuo.com/image/150615/w0h2yoa72.png-pw144",
+                        "name": "Yakisoba Noodles",
+                        "order": 4,
+                        "parent_id": 2,
+                        "url": "https://japee.tokyo/product-category/japanesefoods/japanese-noodles/yakisoba-noodles/",
+                        "img": "",
+                        "status": 0
+                    }
+                ]
+            },
+            {
+                "icon_url": "http://img03.liwushuo.com/image/150615/ap97rx8is.png-pw144",
+                "id": 3,
+                "name": "Nutritional Foods",
+                "order": 9,
+                "status": 0,
+                "subcategories": [
+                    {
+                        "icon_url": "http://img02.liwushuo.com/image/150615/bj9ch14r1.png-pw144",
+                        "name": "Jelly",
+                        "order": 0,
+                        "parent_id": 3,
+                        "url": "https://japee.tokyo/product-category/japanesefoods/nutritional-foods/jelly/",
+                        "img": "",
+                        "status": 0
+                    }
+                ]
+            },
+            {
+                "icon_url": "http://img03.liwushuo.com/image/150615/ap97rx8is.png-pw144",
+                "id": 4,
+                "name": "Tea / Matcha",
+                "order": 9,
+                "status": 0,
+                "subcategories": [
+                    {
+                        "icon_url": "http://img02.liwushuo.com/image/150615/bj9ch14r1.png-pw144",
+                        "name": "Matcha",
+                        "order": 0,
+                        "parent_id": 4,
+                        "url": "https://japee.tokyo/product-category/japanesefoods/tea-matcha/matcha/",
+                        "img": "",
+                        "status": 0
+                    }
+                ]
+            },
+            {
+                "icon_url": "http://img01.liwushuo.com/image/150427/as9ys97f0.png-pw144",
+                "id": 5,
+                "name": "Basic Skin Care",
+                "order": 10,
+                "status": 0,
+                "subcategories": [
+                    {
+                        "icon_url": "http://img03.liwushuo.com/image/150615/80mkxagby.png-pw144",
+                        "name": "Base Cream",
+                        "order": 6,
+                        "parent_id": 5,
+                        "url": "https://japee.tokyo/product-category/beauty/basic-skin-care/base-cream/",
+                        "img": "",
+                        "status": 0
+                    },
+                    {
+                        "icon_url": "http://img03.liwushuo.com/image/150615/vprcl0vym.png-pw144",
+                        "name": "Lip Balms",
+                        "order": 5,
+                        "parent_id": 5,
+                        "url": "https://japee.tokyo/product-category/beauty/basic-skin-care/lip-balms/",
+                        "img": "",
+                        "status": 0
+                    },
+                    {
+                        "icon_url": "http://img01.liwushuo.com/image/150615/w0h2yoa72.png-pw144",
+                        "name": "Lotions & Toners",
+                        "order": 4,
+                        "parent_id": 5,
+                        "url": "https://japee.tokyo/product-category/beauty/basic-skin-care/lotions-toners/",
+                        "img": "",
+                        "status": 0
+                    }
+                ]
+            },
+            {
+                "icon_url": "http://img03.liwushuo.com/image/150615/ap97rx8is.png-pw144",
+                "id": 6,
+                "name": "Cleansing",
+                "order": 9,
+                "status": 0,
+                "subcategories": [
+                    {
+                        "icon_url": "http://img02.liwushuo.com/image/150615/bj9ch14r1.png-pw144",
+                        "name": "Cleansing Oil",
+                        "order": 0,
+                        "parent_id": 6,
+                        "url": "https://japee.tokyo/product-category/beauty/cleansing/cleansing-oil/",
+                        "img": "",
+                        "status": 0
+                    }
+                ]
+            },
+            {
+                "icon_url": "http://img03.liwushuo.com/image/150615/ap97rx8is.png-pw144",
+                "id": 7,
+                "name": "Face Wash",
+                "order": 9,
+                "status": 0,
+                "subcategories": [
+                    {
+                        "icon_url": "http://img02.liwushuo.com/image/150615/bj9ch14r1.png-pw144",
+                        "name": "Foaming Facial Wash",
+                        "order": 0,
+                        "parent_id": 7,
+                        "url": "https://japee.tokyo/product-category/beauty/facewash/foamingfacialcleansers/",
+                        "img": "",
+                        "status": 0
+                    }
+                ]
+            },
+            {
+                "icon_url": "http://img03.liwushuo.com/image/150615/ap97rx8is.png-pw144",
+                "id": 8,
+                "name": "Facial Cleansers",
+                "order": 9,
+                "status": 0,
+                "subcategories": [
+                    {
+                        "icon_url": "http://img02.liwushuo.com/image/150615/bj9ch14r1.png-pw144",
+                        "name": "Foaming Facial Cleansers",
+                        "order": 0,
+                        "parent_id": 8,
+                        "url": "https://japee.tokyo/product-category/beauty/facial-cleansers/foaming-facial-cleansers/",
+                        "img": "",
+                        "status": 0
+                    }
+                ]
+            },
+            {
+                "icon_url": "http://img03.liwushuo.com/image/150615/ap97rx8is.png-pw144",
+                "id": 9,
+                "name": "Health Care",
+                "order": 9,
+                "status": 0,
+                "subcategories": [
+                    {
+                        "icon_url": "http://img02.liwushuo.com/image/150615/bj9ch14r1.png-pw144",
+                        "name": "Cough Drop",
+                        "order": 0,
+                        "parent_id": 9,
+                        "url": "https://japee.tokyo/product-category/beauty/health-care/cough-drop/",
+                        "img": "",
+                        "status": 0
+                    },
+                    {
+                        "icon_url": "http://img02.liwushuo.com/image/150615/bj9ch14r1.png-pw144",
+                        "name": "Surgical Mask",
+                        "order": 0,
+                        "parent_id": 9,
+                        "url": "https://japee.tokyo/product-category/beauty/health-care/surgical-mask/",
+                        "img": "",
+                        "status": 0
+                    }
+                ]
+            },
+            {
+                "icon_url": "http://img03.liwushuo.com/image/150615/ap97rx8is.png-pw144",
+                "id": 10,
+                "name": "Sanitary Goods",
+                "order": 9,
+                "status": 0,
+                "subcategories": [
+                    {
+                        "icon_url": "http://img02.liwushuo.com/image/150615/bj9ch14r1.png-pw144",
+                        "name": "Contraceptives",
+                        "order": 0,
+                        "parent_id": 10,
+                        "url": "https://japee.tokyo/product-category/beauty/sanitary-goods/contraceptives/",
+                        "img": "",
+                        "status": 0
+                    }
+                ]
+            },
+            {
+                "icon_url": "http://img03.liwushuo.com/image/150615/ap97rx8is.png-pw144",
+                "id": 11,
+                "name": "Supplement",
+                "order": 9,
+                "status": 0,
+                "subcategories": [
+                    {
+                        "icon_url": "http://img02.liwushuo.com/image/150615/bj9ch14r1.png-pw144",
+                        "name": "Supplement",
+                        "order": 0,
+                        "parent_id": 11,
+                        "url": "https://japee.tokyo/product-category/beauty/supplement-beauty/",
+                        "img": "",
+                        "status": 0
+                    }
+                ]
+            }
+        ]
+    },
+    "message": "OK"
+}

@@ -8,6 +8,7 @@ target 'dkddm' do
   # Pods for dkddm
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
+  pod 'SDWebImage'
 
 
   target 'dkddmTests' do
