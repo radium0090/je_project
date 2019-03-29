@@ -61,6 +61,7 @@ class CollectionViewController: UIViewController, UITableViewDelegate, UITableVi
         view.addSubview(collectionView)
         
         tableView.selectRow(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .none)
+        navigationController?.navigationBar.setBackgroundImage(UIImage(named: "naviBarBg"), for: .default)
     }
 }
 
@@ -153,7 +154,7 @@ extension CollectionViewController {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCollectionViewCell, for: indexPath) as! CollectionViewCell
         let model = collectionDatas[indexPath.section][indexPath.row]
-        print("888 : \(model.url)")
+//        print("888 : \(model.url)")
         cell.setDatas(model)
         return cell
     }

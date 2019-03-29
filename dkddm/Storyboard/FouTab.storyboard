@@ -30,7 +30,7 @@
         <scene sceneID="bi7-Uj-ZH4">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LHu-ys-fPW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="9fw-MS-XZB"/>
+                    <tabBarItem key="tabBarItem" tag="3" systemItem="featured" id="9fw-MS-XZB"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dtm-LY-eZ3">

@@ -29,6 +29,7 @@ class ViewController: UITabBarController, UITabBarControllerDelegate {
         // Do any additional setup after loading the view.
         self.tabBarController?.delegate = self
         self.setNavBar()
+//        self.setupRefreshControl()
     }
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
@@ -51,7 +52,11 @@ class ViewController: UITabBarController, UITabBarControllerDelegate {
         let statusHeight = UIApplication.shared.statusBarFrame.height
         webView = WKWebView(frame:CGRect(x: 0, y: navHeight!+statusHeight, width: self.view.bounds.size.width, height: self.view.bounds.size.height))
         webView.navigationDelegate = self
-        
+        // pull to referesh
+        webView.scrollView.bounces = true
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshWebView(sender:)), for: UIControl.Event.valueChanged)
+        self.webView.scrollView.addSubview(refreshControl)
         // URL設定
         let encodedUrlString = urlString.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)
         let url = NSURL(string: encodedUrlString!)
@@ -98,11 +103,11 @@ class ViewController: UITabBarController, UITabBarControllerDelegate {
         button.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
         let barButton = UIBarButtonItem(customView: button)
         //assign button to navigationbar
-        self.navigationItem.leftBarButtonItem = barButton
+        self.navigationItem.rightBarButtonItem = barButton
         // set right btn
-        let refreshButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.refresh, target: self, action: #selector(ViewController.clickRefresh))
-        refreshButton.tintColor = UIColor.black
-        self.navigationItem.rightBarButtonItem = refreshButton
+//        let refreshButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.refresh, target: self, action: #selector(ViewController.clickRefresh))
+//        refreshButton.tintColor = UIColor.black
+//        self.navigationItem.rightBarButtonItem = refreshButton
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(named: "naviBarBg"), for: .default)
     }
@@ -113,13 +118,23 @@ class ViewController: UITabBarController, UITabBarControllerDelegate {
         showCameraViewConfirmation()
     }
     
-    @objc func clickRefresh() {
-        print("clickRefresh pressed.....")
+//    @objc func clickRefresh() {
+//        print("clickRefresh pressed.....")
+//        if webView.url != nil {
+//            webView.reload()
+//        } else {
+//            webView.load(URLRequest(url: URL(string: "https://japee.tokyo")!))
+//        }
+//    }
+    
+    @objc private func refreshWebView(sender: UIRefreshControl) {
+        print("refreshing...")
         if webView.url != nil {
             webView.reload()
         } else {
             webView.load(URLRequest(url: URL(string: "https://japee.tokyo")!))
         }
+        sender.endRefreshing()
     }
     
     deinit{

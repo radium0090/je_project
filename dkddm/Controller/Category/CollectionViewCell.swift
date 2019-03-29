@@ -26,7 +26,7 @@ class CollectionViewCell: UICollectionViewCell {
         contentView.addSubview(imageV)
         
         nameLabel.frame = CGRect.init(x: 2, y: frame.size.width + 2, width: frame.size.width - 4, height: 20)
-        nameLabel.font = UIFont.systemFont(ofSize: 13)
+        nameLabel.font = UIFont.systemFont(ofSize: 14)
         nameLabel.textAlignment = .center
         contentView.addSubview(nameLabel)
     }
@@ -35,13 +35,15 @@ class CollectionViewCell: UICollectionViewCell {
         
         guard
             let iconUrl = model.iconUrl,
+            let img = model.img,
             let name = model.name else { return }
         
-        guard let url = URL(string: iconUrl) else { return }
+//        guard let url = URL(string: iconUrl) else { return }
         
         nameLabel.text = name
 //        imageV.kf.setImage(with: url)
-        imageV.sd_setImage(with: url, placeholderImage: UIImage(named: "my"))
+//        imageV.sd_setImage(with: url, placeholderImage: UIImage(named: "my"))
+        imageV.image = UIImage(named: img)
     }
     
     required init?(coder aDecoder: NSCoder) {

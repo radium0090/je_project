@@ -15,10 +15,10 @@ class CollectionViewHeaderView: UICollectionReusableView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = UIColor(240, 240, 240, 0.8)
+        backgroundColor = UIColor(240, 255, 255, 0.65)
         
         titleLabel.frame = CGRect(x: 0, y: 5, width: ScreenWidth - 80, height: 20)
-        titleLabel.font = UIFont.systemFont(ofSize: 14)
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 18)
         titleLabel.textAlignment = .center
         addSubview(titleLabel)
     }

@@ -96,7 +96,7 @@
                         "order": 6,
                         "parent_id": 2,
                         "url": "https://japee.tokyo/product-category/japanesefoods/japanese-noodles/udon-noodles/",
-                        "img": "",
+                        "img": "wudon",
                         "status": 0
                     },
                     {
@@ -105,7 +105,7 @@
                         "order": 5,
                         "parent_id": 2,
                         "url": "https://japee.tokyo/product-category/japanesefoods/japanese-noodles/japanese-ramen-noodles/",
-                        "img": "",
+                        "img": "ramen",
                         "status": 0
                     },
                     {
@@ -114,7 +114,7 @@
                         "order": 4,
                         "parent_id": 2,
                         "url": "https://japee.tokyo/product-category/japanesefoods/japanese-noodles/yakisoba-noodles/",
-                        "img": "",
+                        "img": "soba",
                         "status": 0
                     }
                 ]
@@ -132,7 +132,7 @@
                         "order": 0,
                         "parent_id": 3,
                         "url": "https://japee.tokyo/product-category/japanesefoods/nutritional-foods/jelly/",
-                        "img": "",
+                        "img": "jelly",
                         "status": 0
                     }
                 ]
@@ -150,7 +150,7 @@
                         "order": 0,
                         "parent_id": 4,
                         "url": "https://japee.tokyo/product-category/japanesefoods/tea-matcha/matcha/",
-                        "img": "",
+                        "img": "matcha",
                         "status": 0
                     }
                 ]
@@ -168,7 +168,7 @@
                         "order": 6,
                         "parent_id": 5,
                         "url": "https://japee.tokyo/product-category/beauty/basic-skin-care/base-cream/",
-                        "img": "",
+                        "img": "bc",
                         "status": 0
                     },
                     {
@@ -177,7 +177,7 @@
                         "order": 5,
                         "parent_id": 5,
                         "url": "https://japee.tokyo/product-category/beauty/basic-skin-care/lip-balms/",
-                        "img": "",
+                        "img": "lb",
                         "status": 0
                     },
                     {
@@ -186,7 +186,7 @@
                         "order": 4,
                         "parent_id": 5,
                         "url": "https://japee.tokyo/product-category/beauty/basic-skin-care/lotions-toners/",
-                        "img": "",
+                        "img": "it",
                         "status": 0
                     }
                 ]
@@ -204,7 +204,7 @@
                         "order": 0,
                         "parent_id": 6,
                         "url": "https://japee.tokyo/product-category/beauty/cleansing/cleansing-oil/",
-                        "img": "",
+                        "img": "co",
                         "status": 0
                     }
                 ]
@@ -222,7 +222,7 @@
                         "order": 0,
                         "parent_id": 7,
                         "url": "https://japee.tokyo/product-category/beauty/facewash/foamingfacialcleansers/",
-                        "img": "",
+                        "img": "ffw",
                         "status": 0
                     }
                 ]
@@ -240,7 +240,7 @@
                         "order": 0,
                         "parent_id": 8,
                         "url": "https://japee.tokyo/product-category/beauty/facial-cleansers/foaming-facial-cleansers/",
-                        "img": "",
+                        "img": "ffc",
                         "status": 0
                     }
                 ]
@@ -258,7 +258,7 @@
                         "order": 0,
                         "parent_id": 9,
                         "url": "https://japee.tokyo/product-category/beauty/health-care/cough-drop/",
-                        "img": "",
+                        "img": "cd",
                         "status": 0
                     },
                     {
@@ -267,7 +267,7 @@
                         "order": 0,
                         "parent_id": 9,
                         "url": "https://japee.tokyo/product-category/beauty/health-care/surgical-mask/",
-                        "img": "",
+                        "img": "sm",
                         "status": 0
                     }
                 ]
@@ -285,7 +285,7 @@
                         "order": 0,
                         "parent_id": 10,
                         "url": "https://japee.tokyo/product-category/beauty/sanitary-goods/contraceptives/",
-                        "img": "",
+                        "img": "c",
                         "status": 0
                     }
                 ]
@@ -303,7 +303,7 @@
                         "order": 0,
                         "parent_id": 11,
                         "url": "https://japee.tokyo/product-category/beauty/supplement-beauty/",
-                        "img": "",
+                        "img": "sp",
                         "status": 0
                     }
                 ]
